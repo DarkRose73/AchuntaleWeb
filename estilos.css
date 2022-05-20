@@ -1,0 +1,55 @@
+.container {
+    margin-top: 50px;
+    width: fit-content;
+}
+
+.fondo {
+    height: max-content;
+    background-image: url("images/fondo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-color: black;
+    background-attachment:fixed ;
+}
+
+.-logo{
+    margin-top: 30px;
+    margin-left: 60px;
+}
+
+.contenedor-carrusel{
+    background-color: black;
+    border-radius: 10em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    width: 650px;
+}
+
+.contenedor{
+    background-color: black;
+    border-radius: 10em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    width: 850px;
+}
+
+.imagen-carrusel{
+    text-align: center;
+    height: 400px;
+}
+
+.texto-carrusel{
+    color:#F58840;
+}
+
+.descripcion-juego{
+    width: auto;
+    margin-top: 40px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #EADEDE;
+}
