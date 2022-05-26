@@ -1,55 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+"use strict"
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <title>Achúntale</title>
-</head>
+const contenidoQuienesSomos = document.getElementById("cuerpo");
 
-<body class="fondo">
-
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <a class="navbar-brand">
-                    <img src="images/logoAchuntaleTransparente.png" style="height: 55px;" alt="">
-                </a>
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="inicio.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="quienesSomos.html">Quienes Somos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="carritoCompra.html">Comprar</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- <div id="cuerpo">
-        <div class="loader" style="margin: auto;margin-top: 3%;">
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <span>Cargando...</span>
-        </div>
-    </div> -->
-
-
-
+const cambiarContenidoQuienesSomos = () => {
+    contenidoQuienesSomos.innerHTML = "";
+    contenidoQuienesSomos.innerHTML = `
     <!-- Contenido -->
     <div class="container-fluid">
         <!-- Sección de como surge Achúntale -->
@@ -179,8 +134,7 @@
                             <span>Misión</span>
                         </div>
                         <div class="card-body text-center" style="color: #EADEDE">
-                            <p>Recuperar el tiempo perdido a través de la entretención <br> "Hacer un mundo más
-                                entretenido" </p>
+                            <p>Recuperar el tiempo perdido a través de la entretención <br> "Hacer un mundo más entretenido" </p>
                             <p></p>
                         </div>
                     </div>
@@ -197,7 +151,7 @@
                         </div>
                     </div>
                 </div>
-
+                
                 DIV VALORES
             </div>
         </div>
@@ -208,7 +162,7 @@
                     <div class="text-center" style="color:#fff;">
                         <h1>Síguenos en Instagram</h1>
                         <a href="https://www.instagram.com/achuntale_cl/" target="_blank"><img
-                                src="images/instagram.png" alt=""></a>
+                        src="images/instagram.png" alt=""></a>
                         <h5>@achuntale_cl</h5>
                     </div>
                 </div>
@@ -216,14 +170,8 @@
             <br>
         </footer>
     </div>
+`
+    contenidoQuienesSomos.style.animation = "aparecer 2s forwards";
+}
 
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-        crossorigin="anonymous"></script>
-    <script src="quienesSomos.js"></script>
-</body>
-
-</html>
+setTimeout(cambiarContenidoQuienesSomos, 2500);

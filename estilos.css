@@ -35,7 +35,7 @@
     border-radius: 10em;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 25px;
+    margin-top: 50px;
     width: 850px;
 }
 
@@ -116,4 +116,8 @@
     to{
         opacity: 1;
     }
+}
+
+.card-tipo{
+    background-color: rgba(255, 128, 0, 0.8);
 }

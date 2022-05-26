@@ -40,35 +40,81 @@
     </nav>
     <div class="container-fluid">
         <div class="row mt-4">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">
-                        asdasd
+            <div class="col-md-6 mx-auto">
+                <!-- CARD PARA COMPRA -->
+                <div class="card"
+                    style="color: #EADEDE;background: rgba(100, 100, 0, 0); border: rgba(100, 100, 0, 0);">
+                    <div class="text-center">
+                        <h1 style="font-weight: 700;color: black;">Comprar</h1>
+                    </div>
+                    <div class="card-body text-center mx-auto">
+                        <!-- INGRESO DE DATOS -->
+                        <div class="input-group" style="width: 350px;">
+                            <input type="email" id="correo" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                                placeholder="Ingrese su correo" class="form-control bg-dark" style="color: #EADEDE;">
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <button class="btn btn-danger btn-outline-dark" id="quitar5"
+                                style="width: 50px;">-5</button>
+                            <button class="btn btn-danger btn-outline-dark" id="quitar"
+                                style="width: 50px; margin-right: 20px;">-1</button>
+                            <input type="number" class="form-control bg-dark mx-auto" disabled="true"
+                                placeholder="Cantidad a comprar" style="color: #EADEDE" min="0" max="50"
+                                style="width: 15em;" id="cantidad">
+                            <button class="btn btn-success btn-outline-dark" id="agregar"
+                                style="width: 50px; margin-left: 20px;">+1</button>
+                            <button class="btn btn-success btn-outline-dark" id="agregar5"
+                                style="width: 50px;">+5</button>
+                        </div>
+                        <label for="stock" id="stock" style="font-size: large; color: #000;">Stock disponible:
+                            50</label>
+                        <div class="input-group mt-3">
+                            <span class="input-group-text input-group-lg bg-dark" style="color: #EADEDE">Precio total
+                                (CLP):
+                            </span>
+                            <input type="text" class="form-control bg-dark" id="precio" style="color: #EADEDE" disabled
+                                id="precioTotal">
+                        </div>
+                    </div>
+                    <div class="card-footer text-center"
+                        style="border: rgba(0,0,0,0);background: rgba(100, 100, 0, 0);">
+                        <button class="btn my-3 mx-auto text-center" id="btn-comprar" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop"
+                            style="width: 100px; color: #000; background-color: orange;">Comprar</button>
+                        <button class="btn my-3 text-center" id="btn-limpiar"
+                            style="margin-left: 40px; width: 100px; color: orange; background-color: #000;">Limpiar</button>
+                    </div>
+                </div>
+
+                <div class="card bg-dark my-3" style="color: #EADEDE">
+                    <div class="card-header text-center">
+                        Datos de envío
                     </div>
                     <div class="card-body">
-                        comprar
+
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-header">
-                        asdasd
-                    </div>
-                    <div class="card-body">
-                        comprar
+            <div class="col-md-6 mx-auto">
+                <div class="card mx-auto" style="background: rgba(0, 0, 0, 0.7); border: rgba(0, 0, 0, 0);">
+                    <img src="images/allInOne2.png" class="card-img-top mx-auto" alt="">
+                    <div class="card-body text-center" style="background: rgba(0, 0, 0, 0); border: rgba(0, 0, 0, 0);color: #EADEDE;">
+                        <h2>¡El kit es casi tuyo!</h2>
                     </div>
                 </div>
             </div>
         </div>
+        <br>
         <!-- FOOTER DE RRSS -->
         <footer>
             <div class="card-footer">
                 <div class="row">
-                    <div class="col-sm-4 text-center">
+                    <div class="text-center" style="color:#fff;">
                         <h1>Síguenos en Instagram</h1>
                         <a href="https://www.instagram.com/achuntale_cl/" target="_blank"><img
                                 src="images/instagram.png" alt=""></a>
+                        <h5>@achuntale_cl</h5>
                     </div>
                 </div>
             </div>
@@ -77,10 +123,30 @@
     </div>
 
 
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    los datos de la compra son los siguientes:
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
-    <script src="index.js"></script>
+    <script src="carritoCompra.js"></script>
 </body>
 
 
