@@ -5,23 +5,12 @@ const contenidoQuienesSomos = document.getElementById("cuerpo");
 const cambiarContenidoQuienesSomos = () => {
     contenidoQuienesSomos.innerHTML = "";
     contenidoQuienesSomos.innerHTML = `
+
     <!-- Contenido -->
     <div class="container-fluid">
-        <!-- Sección de como surge Achúntale -->
+        <!-- CARRUSEL DE IMÁGENES -->
         <div class="row">
-            <div class="col-sm-6 text-center mx-auto" style="margin-top: 20px;">
-                <div class="card bg-dark">
-                    <div class="card-body text-center bg-dark" style="color: #EADEDE; border-radius: 20%;">
-                        <p>Achúntale es una empresa que surge en la Universidad Técnica Federico Santa María, como
-                            proyecto de la asignatura “Creación de Empresas”. El producto que ofrece esta empresa
-                            concretamente es un juego interactivo de madera diseñado para dos jugadores</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <!-- CARRUSEL DE IMÁGENES -->
-            <div class="col-sm-9">
+            <div class="col-sm-8 my-2 mx-auto">
                 <div class="contenedor">
                     <div class="contenedor-carrusel">
                         <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
@@ -50,7 +39,7 @@ const cambiarContenidoQuienesSomos = () => {
                                     <img src="images/equipo/DavidOjeda.png" alt="...">
                                     <div class="texto-carrusel">
                                         <h4>David Ojeda</h4>
-                                        <p>Gerente General</p>
+                                        <p>Gerente general</p>
                                     </div>
                                 </div>
                                 <div class="carousel-item imagen-carrusel" data-bs-interval="3000">
@@ -64,7 +53,7 @@ const cambiarContenidoQuienesSomos = () => {
                                     <img src="images/equipo/ValentinaRamirez.png" alt="...">
                                     <div class="texto-carrusel">
                                         <h4>Valentina Ramírez</h4>
-                                        <p>Gerente de Ventas</p>
+                                        <p>Gerente de ventas</p>
                                     </div>
                                 </div>
                                 <div class="carousel-item imagen-carrusel" data-bs-interval="3000">
@@ -78,7 +67,7 @@ const cambiarContenidoQuienesSomos = () => {
                                     <img src="images/equipo/FernandaAguero.png" alt="...">
                                     <div class="texto-carrusel">
                                         <h4>Fernanda Agüero</h4>
-                                        <p>Community Manager</p>
+                                        <p>Community manager</p>
                                     </div>
                                 </div>
                                 <div class="carousel-item imagen-carrusel" data-bs-interval="3000">
@@ -106,7 +95,7 @@ const cambiarContenidoQuienesSomos = () => {
                                     <img src="images/equipo/JavieraYakasovic.png" alt="...">
                                     <div class="texto-carrusel">
                                         <h4>Javiera Yakasovic</h4>
-                                        <p>Gerente innovación</p>
+                                        <p>Gerente de innovación</p>
                                     </div>
                                 </div>
                             </div>
@@ -124,36 +113,90 @@ const cambiarContenidoQuienesSomos = () => {
                         </div>
                     </div>
                 </div>
-                <br>
             </div>
+        </div>
 
-            <div class="col-sm-2" style="margin-top: 25px;">
-                <div class="row">
-                    <div class="card bg-dark">
-                        <div class="card-header text-center" style="color: #EADEDE;">
-                            <span>Misión</span>
-                        </div>
-                        <div class="card-body text-center" style="color: #EADEDE">
-                            <p>Recuperar el tiempo perdido a través de la entretención <br> "Hacer un mundo más entretenido" </p>
-                            <p></p>
-                        </div>
+        <div class="row">
+
+            <!-- COMO SURGE -->
+            <div class="col-sm-3 text-end mx-auto my-4">
+                <div class="card" style="background-color: rgba(255, 128, 0, 0.8);color: #000;">
+                    <div class="card-header text-center">
+                        <span>
+                            <h2>Surgimiento</h2>
+                        </span>
+                    </div>
+                    <div class="card-body text-center" style="color: black; height: 180px;">
+                        <p>
+                        <h5>Achúntale es una empresa que surge en la Universidad Técnica Federico Santa María, como
+                            proyecto de la asignatura “Creación de Empresas”.</h5>
+                        </p>
                     </div>
                 </div>
+            </div>
 
-                <div class="row mt-4">
-                    <div class="card bg-dark">
-                        <div class="card-header text-center" style="color: #EADEDE">
-                            <span>Visión</span>
-                        </div>
-                        <div class="card-body text-center" style="color: #EADEDE">
-                            <p>"Convertirnos en una empresa reconocida dentro de la región, relacionados
-                                alentretenimiento y tiempo de calidad através de nuestro producto"</p>
-                        </div>
+            <!-- MISION -->
+            <div class="col-sm-3 text-end mx-auto my-4">
+                <div class="card" style="background-color: rgba(255, 128, 0, 0.8);color: #000;">
+                    <div class="card-header text-center">
+                        <span>
+                            <h2>Misión</h2>
+                        </span>
+                    </div>
+                    <div class="card-body text-center" style="height: 180px;">
+                        <p>
+                        <h5>Recuperar el tiempo perdido a través de la entretención <br> "Hacer un mundo más
+                            entretenido"</h5>
+                        </p>
                     </div>
                 </div>
-                
-                DIV VALORES
             </div>
+
+
+            <!-- VISION -->
+            <div class="col-sm-3 text-end mx-auto my-4">
+                <div class="card" style="background-color: rgba(255, 128, 0, 0.8);color: #000;">
+                    <div class="card-header text-center">
+                        <span>
+                            <h2>Visión</h2>
+                        </span>
+                    </div>
+                    <div class="card-body text-center" style="height: 180px;">
+                        <p>
+                        <h5>"Convertirnos en una empresa reconocida dentro de la región, relacionados
+                            alentretenimiento y tiempo de calidad através de nuestro producto"</h5>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VALORES -->
+            <div class="col-sm-3 mx-auto my-4">
+                <div class="card" style="background-color: rgba(255, 128, 0, 0.8);color: #000;">
+                    <div class="card-header text-center">
+                        <span>
+                            <h2>Valores</h2>
+                        </span>
+                    </div>
+                    <div class="card-body" style="height: 180px;">
+                        <ul>
+                            <li>
+                                <h5>Entretención</h5>
+                            </li>
+                            <br>
+                            <li>
+                                <h5>Recreación</h5>
+                            </li>
+                            <br>
+                            <li>
+                                <h5>Convivencia</h5>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
         <!-- FOOTER DE RRSS -->
         <footer>
@@ -162,7 +205,7 @@ const cambiarContenidoQuienesSomos = () => {
                     <div class="text-center" style="color:#fff;">
                         <h1>Síguenos en Instagram</h1>
                         <a href="https://www.instagram.com/achuntale_cl/" target="_blank"><img
-                        src="images/instagram.png" alt=""></a>
+                                src="images/instagram.png" alt=""></a>
                         <h5>@achuntale_cl</h5>
                     </div>
                 </div>
