@@ -40,14 +40,153 @@
     </nav>
 
 
-    <div id="cuerpo">
-        <div class="loader" style="margin: auto;margin-top: 3%;">
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <span>Cargando...</span>
+    <div class="container-fluid">
+        <div class="row mt-4">
+            <div class="col-md-6 mx-auto">
+                <!-- CARD PARA COMPRA -->
+                <div class="card"
+                    style="color: #EADEDE;background: rgba(100, 100, 0, 0); border: rgba(100, 100, 0, 0);">
+                    <div class="text-center">
+                        <h1 style="font-weight: 700;color: black;">Comprar</h1>
+                    </div>
+                    <div class="card-body text-center mx-auto">
+                        <!-- INGRESO DE DATOS -->
+                        <div class="input-group" style="width: 350px;">
+                            <input type="email" id="correo" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                                autocomplete="off" placeholder="Ingrese su correo" class="form-control bg-dark"
+                                style="color: #EADEDE;">
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <button class="btn btn-danger btn-outline-dark" id="quitar5"
+                                style="width: 50px;">-5</button>
+                            <button class="btn btn-danger btn-outline-dark" id="quitar"
+                                style="width: 50px; margin-right: 20px;">-1</button>
+                            <input type="number" class="form-control bg-dark mx-auto" disabled="true"
+                                placeholder="Cantidad" style="color: #EADEDE" min="0" max="50"
+                                style="width: 15em;" id="cantidad">
+                            <button class="btn btn-success btn-outline-dark" id="agregar"
+                                style="width: 50px; margin-left: 20px;">+1</button>
+                            <button class="btn btn-success btn-outline-dark" id="agregar5"
+                                style="width: 50px;">+5</button>
+                        </div>
+                        <label for="stock" id="stock" style="font-size: large; color: #000;">Stock disponible:
+                            50</label>
+                        <div class="input-group mt-3">
+                            <span class="input-group-text input-group-lg bg-dark" style="color: #EADEDE">Precio total
+                                (CLP):
+                            </span>
+                            <input type="text" class="form-control bg-dark" id="precio" style="color: #EADEDE" disabled
+                                id="precioTotal">
+                        </div>
+                    </div>
+                    <!-- BOTONES -->
+                    <div class="card-footer text-center"
+                        style="border: rgba(0,0,0,0);background: rgba(100, 100, 0, 0);">
+                        <button class="btn my-3 mx-auto text-center btn-success" id="btn-comprar" disabled
+                            style="width: 100px; color: #000;">Comprar</button>
+                        <button class="btn my-3 text-center" id="btn-limpiar"
+                            style="margin-left: 40px; width: 100px; color: orange; background-color: #000;">Limpiar</button>
+                        <button data-bs-toggle="modal" id="btn-modal" data-bs-target="#staticBackdrop" disabled
+                            style="opacity: 0;"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mx-auto">
+                <div class="card mx-auto" style="background: rgba(0, 0, 0, 0.7); border: rgba(0, 0, 0, 0);">
+                    <img src="images/allInOne2.png" class="card-img-top mx-auto" alt="">
+                    <div class="card-body text-center"
+                        style="background: rgba(0, 0, 0, 0); border: rgba(0, 0, 0, 0);color: #EADEDE;">
+                        <h2>¡El kit es casi tuyo!</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <!-- FOOTER DE RRSS -->
+        <footer>
+            <div class="card-footer">
+                <div class="row">
+                    <div class="text-center" style="color:#fff;">
+                        <h1>Síguenos en Instagram</h1>
+                        <a href="https://www.instagram.com/achuntale_cl/" target="_blank"><img
+                                src="images/instagram.png" alt=""></a>
+                        <h5>@achuntale_cl</h5>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </footer>
+    </div>
+    
+    
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Datos de envío</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="card">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card-body">
+                                    <label for="nombre" class="form-label">Nombre *</label>
+                                    <input type="text" id="nombre" class="form-control" autocomplete="off">
+                                </div>
+                                <div class="card-body">
+                                    <label for="apellido" class="form-label">Dirección *</label>
+                                    <input type="text" id="direccion" class="form-control">
+                                </div>
+                                <div class="card-body">
+                                    <label for="apellido" class="form-label">Ciudad *</label>
+                                    <input type="text" id="ciudad" class="form-control">
+                                </div>
+                                <div class="card-body">
+                                    <label for="apellido" class="form-label">Región *</label>
+                                    <select name="" class="form-control" id="select-region">
+                                        <option value="Valparaiso">Valparaíso</option>
+                                        <option value="Santiago">Región Metropolitana</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card-body">
+                                    <label class="form-label">Apellido *</label>
+                                    <input type="text" id="apellido" class="form-control">
+                                </div>
+                                <div class="card-body">
+                                    <label class="form-label">Codigo postal *</label>
+                                    <input type="text" id="codigoPostal" class="form-control">
+                                </div>
+                                <div class="card-body">
+                                    <label class="form-label">País *</label>
+                                    <select class="form-control" id="select-pais">
+                                        <option value="Chile">Chile</option>
+                                    </select>
+                                </div>
+                                <div class="card-body">
+                                    <label class="form-label">Comuna *</label>
+                                    <select id="select-comuna" class="form-control">
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="btn-modal-confirmar"
+                        class="btn btn-success btn-outline-dark">Confirmar</button>
+                    <button type="button" id="btn-modal-cancelar" class="btn btn-danger btn-outline-dark"
+                        data-bs-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
         </div>
     </div>
+    
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
