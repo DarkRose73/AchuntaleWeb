@@ -235,6 +235,7 @@ const agregar = (cantidadAgregada) => {
     }
 }
 
+
 //Función para reestablecer los datos del formulario
 const limpiarFormulario = () => {
     correo.value = "";
@@ -244,6 +245,8 @@ const limpiarFormulario = () => {
     precio.value = `$ ${0}`;
     botonComprar.disabled = true;
 }
+
+
 
 //Función para cargar las comunas en los select en base a la región seleccionada
 const cargarOptionComuna = () => {
@@ -269,6 +272,11 @@ const cargarOptionComuna = () => {
     }
 }
 
+
+
+
+
+
 //Función de compra, se validan los datos ingresados
 const comprar = () => {
     let cantidadCompra = cantidad.value;
@@ -284,13 +292,15 @@ const comprar = () => {
     if (errores.length == 0) {
         Swal.fire({
             title: "¿Está seguro que estos datos están correctos?",
-            text: `correo: ${correoCompra} - cantidad de compra: ${cantidadCompra} - total compra: ${totalCompra}`,
+            text: `correo: ${correoCompra} - cantidad de compra: 
+            ${cantidadCompra} - total compra: ${totalCompra}`,
             icon: "info",
             showCancelButton: true,
             confirmButtonText: "Sí",
             cancelButtonText: "No",
         }).then(resultado => {
-            //Si el usuario está conforme con los datos ingresados, se muestra el modal para la dirección de envío
+            //Si el usuario está conforme con los datos ingresados, 
+            //se muestra el modal para la dirección de envío
             if (resultado.isConfirmed) {
                 botonModal.disabled = false;
                 botonModal.click();
@@ -311,6 +321,8 @@ const comprar = () => {
         });
     }
 }
+
+
 
 //Validación de los datos ingresados en el modal de envío
 const confirmarEnvio = () => {
@@ -340,7 +352,8 @@ const confirmarEnvio = () => {
         errores.push("ciudad del envío");
     }
     //En el caso de no haber errores, se muestra un mensaje
-    //Esto se puede cambiar por una redirección a un entorno seguro de pago, por ejemplo, transbank api
+    //Esto se puede cambiar por una redirección a un entorno 
+    //seguro de pago, por ejemplo, transbank api
     if (errores.length == 0) {
         let nroCompra = Math.round(Math.random() * 100);
         console.log(nroCompra);
@@ -411,7 +424,8 @@ window.addEventListener("DOMContentLoaded", () => {
     cargarOptionComuna();
 });
 
-//Al cambiar el select de región, se realiza la carga de las comunas en base a la región seleccionada
+//Al cambiar el select de región, se realiza la carga de 
+//las comunas en base a la región seleccionada
 selectRegion.addEventListener("change", () => {
     cargarOptionComuna();
 });
